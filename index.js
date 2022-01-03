@@ -13,16 +13,16 @@ function haku() {
 
     let uri ="http://universities.hipolabs.com/search?country=" + document.getElementById("inputvalue").value;
 // HTTP request
-let xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", uri, true); 
+let xmlhttps = new XMLHttpRequest();
+xmlhttps.open("GET", uri, true); 
 // send request
-xmlhttp.send();
+xmlhttps.send();
 
-xmlhttp.onreadystatechange=function() {
-    if(xmlhttp.readyState === 4 && xmlhttp.status === 200){ 
+xmlhttps.onreadystatechange=function() {
+    if(xmlhttps.readyState === 4 && xmlhttps.status === 200){ 
         document.getElementById("data").innerHTML ="<ul>";
         
-        let domains = JSON.parse(xmlhttp.response);
+        let domains = JSON.parse(xmlhttps.response);
         domains.forEach(element => {
             document.getElementById("data").innerHTML += "<li>" + "<a href='" + element.web_pages + "'>" + element.name + "</a>"  + "</li>" + "<br>";
             
