@@ -81,7 +81,7 @@ a:hover {
     color: white;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width:912px) {
     header {
         height: auto;
     }
@@ -91,13 +91,14 @@ a:hover {
     }
 
     aside {
-        width: auto;
+        width: 100%;
         margin-left: 0em;
     }
 
     input {
         width: auto;
         font-size: auto;
+        margin-left: 1vh;
     }
 
     button {
